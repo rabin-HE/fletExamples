@@ -28,7 +28,7 @@ def main(page: ft.Page):
                     break
                 if init >= 0:
                     dark_ligt_switch.controls[0].content.content.name = (
-                        ft.icons.DARK_MODE
+                        ft.Icons.DARK_MODE
                     )
                     dark_ligt_switch.controls[0].content.content.color = "white"
                     dark_ligt_switch.controls[0].content.bgcolor = "#2C2B2C"
@@ -47,7 +47,7 @@ def main(page: ft.Page):
                     break
                 if init <= 0:
                     dark_ligt_switch.controls[0].content.content.name = (
-                        ft.icons.LIGHT_MODE
+                        ft.Icons.LIGHT_MODE
                     )
                     dark_ligt_switch.controls[0].content.content.color = "yellow"
                     dark_ligt_switch.controls[0].content.bgcolor = "white"
@@ -71,7 +71,7 @@ def main(page: ft.Page):
                 padding=ft.padding.only(left=5, right=5),
                 content=ft.Container(
                     animate_rotation=ft.Animation(600, "easeInOut"),
-                    content=ft.Icon(name=ft.icons.LIGHT_MODE, color="#FFDC5D", size=27),
+                    content=ft.Icon(name=ft.Icons.LIGHT_MODE, color="#FFDC5D", size=27),
                     height=40,
                     width=40,
                     border_radius=100,

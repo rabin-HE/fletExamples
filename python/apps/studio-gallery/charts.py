@@ -197,7 +197,7 @@ def line_chart():
         chart.update()
 
     return ft.Column(
-        controls=[ft.IconButton(ft.icons.REFRESH, on_click=toggle_data), chart],
+        controls=[ft.IconButton(ft.Icons.REFRESH, on_click=toggle_data), chart],
     )
 
 
@@ -339,7 +339,7 @@ def pie_chart():
                 title_style=normal_title_style,
                 color=ft.colors.BLUE,
                 radius=normal_radius,
-                badge=badge(ft.icons.AC_UNIT, normal_badge_size),
+                badge=badge(ft.Icons.AC_UNIT, normal_badge_size),
                 badge_position=0.98,
             ),
             ft.PieChartSection(
@@ -348,7 +348,7 @@ def pie_chart():
                 title_style=normal_title_style,
                 color=ft.colors.YELLOW,
                 radius=normal_radius,
-                badge=badge(ft.icons.ACCESS_ALARM, normal_badge_size),
+                badge=badge(ft.Icons.ACCESS_ALARM, normal_badge_size),
                 badge_position=0.98,
             ),
             ft.PieChartSection(
@@ -357,7 +357,7 @@ def pie_chart():
                 title_style=normal_title_style,
                 color=ft.colors.PURPLE,
                 radius=normal_radius,
-                badge=badge(ft.icons.APPLE, normal_badge_size),
+                badge=badge(ft.Icons.APPLE, normal_badge_size),
                 badge_position=0.98,
             ),
             ft.PieChartSection(
@@ -366,7 +366,7 @@ def pie_chart():
                 title_style=normal_title_style,
                 color=ft.colors.GREEN,
                 radius=normal_radius,
-                badge=badge(ft.icons.PEDAL_BIKE, normal_badge_size),
+                badge=badge(ft.Icons.PEDAL_BIKE, normal_badge_size),
                 badge_position=0.98,
             ),
         ],

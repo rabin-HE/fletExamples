@@ -53,7 +53,7 @@ def main(page: ft.Page):
         height=100,
         content=ft.ElevatedButton(
             elevation=0,
-            icon=ft.icons.HOME,
+            icon=ft.Icons.HOME,
             icon_color="#5946A7",
             color="#5946A7",
             text="Home",
@@ -67,7 +67,7 @@ def main(page: ft.Page):
         height=100,
         content=ft.ElevatedButton(
             elevation=0,
-            icon=ft.icons.FAVORITE,
+            icon=ft.Icons.FAVORITE,
             icon_color="#060806",
             color="#B45386",
             text="Liked",
@@ -81,7 +81,7 @@ def main(page: ft.Page):
         height=100,
         content=ft.ElevatedButton(
             elevation=0,
-            icon=ft.icons.SEARCH,
+            icon=ft.Icons.SEARCH,
             icon_color="#060806",
             color="#E1A01D",
             text="Search",
@@ -95,7 +95,7 @@ def main(page: ft.Page):
         height=100,
         content=ft.ElevatedButton(
             elevation=0,
-            icon=ft.icons.PERSON_ROUNDED,
+            icon=ft.Icons.PERSON_ROUNDED,
             icon_color="#060806",
             color="#1684A0",
             text="Profile",

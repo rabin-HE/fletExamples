@@ -37,7 +37,7 @@ class ItemList(ft.Draggable):
                             self.item_name,
                             ft.TextButton(
                                 "Add Item",
-                                icon=ft.icons.ADD,
+                                icon=ft.Icons.ADD,
                                 on_click=self.add_item_handler,
                             ),
                             self.items,
@@ -176,7 +176,7 @@ class Item(ft.Draggable):
             content=ft.Container(
                 content=ft.Row(
                     [
-                        ft.Icon(name=ft.icons.CIRCLE_OUTLINED),
+                        ft.Icon(name=ft.Icons.CIRCLE_OUTLINED),
                         ft.Text(value=f"{self.item_text}"),
                     ],
                     alignment=ft.MainAxisAlignment.START,
