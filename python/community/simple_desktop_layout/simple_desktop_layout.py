@@ -18,7 +18,7 @@ from flet import (
     PopupMenuButton,
     PopupMenuItem,
 )
-from flet import colors, icons
+from flet import Colors, Icons
 
 
 class DesktopAppLayout(Row):
@@ -135,7 +135,6 @@ class DesktopAppLayout(Row):
                             PopupMenuItem(
                                 icon=icons.CONTACT_SUPPORT,
                                 text="Ask a question",
-
                             ),
                             PopupMenuItem(
                                 icon=icons.BUG_REPORT,
