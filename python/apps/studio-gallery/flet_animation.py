@@ -10,27 +10,27 @@ def example(page):
     gap = 3
     duration = 2000
 
-    c1 = colors.PINK_500
-    c2 = colors.AMBER_500
-    c3 = colors.LIGHT_GREEN_500
-    c4 = colors.DEEP_PURPLE_500
+    c1 = Colors.PINK_500
+    c2 = Colors.AMBER_500
+    c3 = Colors.LIGHT_GREEN_500
+    c4 = Colors.DEEP_PURPLE_500
 
     all_colors = [
-        colors.AMBER_400,
-        colors.AMBER_ACCENT_400,
-        colors.BLUE_400,
-        colors.BROWN_400,
-        colors.CYAN_700,
-        colors.DEEP_ORANGE_500,
-        colors.CYAN_500,
-        colors.INDIGO_600,
-        colors.ORANGE_ACCENT_100,
-        colors.PINK,
-        colors.RED_600,
-        colors.GREEN_400,
-        colors.GREEN_ACCENT_200,
-        colors.TEAL_ACCENT_200,
-        colors.LIGHT_BLUE_500,
+        Colors.AMBER_400,
+        Colors.AMBER_ACCENT_400,
+        Colors.BLUE_400,
+        Colors.BROWN_400,
+        Colors.CYAN_700,
+        Colors.DEEP_ORANGE_500,
+        Colors.CYAN_500,
+        Colors.INDIGO_600,
+        Colors.ORANGE_ACCENT_100,
+        Colors.PINK,
+        Colors.RED_600,
+        Colors.GREEN_400,
+        Colors.GREEN_ACCENT_200,
+        Colors.TEAL_ACCENT_200,
+        Colors.LIGHT_BLUE_500,
     ]
 
     parts = [

@@ -87,14 +87,14 @@ def main(page: Page):
 
     # button to change theme_mode (from dark to light mode, or the reverse)
     theme_icon_button = IconButton(
-        icons.DARK_MODE,
-        selected_icon=icons.LIGHT_MODE,
-        icon_color=colors.BLACK,
+        Icons.DARK_MODE,
+        selected_icon=Icons.LIGHT_MODE,
+        icon_color=Colors.BLACK,
         icon_size=35,
         tooltip="change theme",
         on_click=change_theme,
         style=ButtonStyle(
-            color={"": colors.BLACK, "selected": colors.WHITE},
+            color={"": Colors.BLACK, "selected": Colors.WHITE},
         ),
     )
 
@@ -102,8 +102,8 @@ def main(page: Page):
         "Move to Version 1",
         on_click=moveto_callback,
         tooltip="change version",
-        icon=icons.KEYBOARD_BACKSPACE_ROUNDED,
-        icon_color=colors.ERROR,
+        icon=Icons.KEYBOARD_BACKSPACE_ROUNDED,
+        icon_color=Colors.ERROR,
     )
 
     page.appbar = AppBar(

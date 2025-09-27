@@ -3,9 +3,25 @@ import time
 from itertools import islice
 import flet
 from flet import (
-    Column, Container, GridView, Icon, Page, Row,
-    SnackBar, Text, TextButton, TextField, UserControl, alignment, colors,
-    icons, FloatingActionButton, IconButton, ProgressBar, ButtonStyle, AppBar
+    Column,
+    Container,
+    GridView,
+    Icon,
+    Page,
+    Row,
+    SnackBar,
+    Text,
+    TextButton,
+    TextField,
+    UserControl,
+    alignment,
+    colors,
+    icons,
+    FloatingActionButton,
+    IconButton,
+    ProgressBar,
+    ButtonStyle,
+    AppBar,
 )
 
 # Increasing the maximum message size that can be sent over the websocket.
@@ -39,7 +55,7 @@ class ColorBrowser1(UserControl):
             while batch := list(islice(iterator, batch_size)):
                 yield batch
 
-        # fetch all icon constants from colors.py module and store them in a dict(colors_dict)
+        # fetch all icon constants from Colors.py module and store them in a dict(colors_dict)
         colors_dict = dict()
         list_started = False
         for key, value in vars(colors).items():
@@ -52,24 +68,38 @@ class ColorBrowser1(UserControl):
 
         # Creating a text field
         search_txt = TextField(
-            expand=1, hint_text="Enter keyword and press search button", autofocus=True,
-            on_submit=lambda e: display_colors(e.control.value), tooltip="search field", label="Color Search Field"
+            expand=1,
+            hint_text="Enter keyword and press search button",
+            autofocus=True,
+            on_submit=lambda e: display_colors(e.control.value),
+            tooltip="search field",
+            label="Color Search Field",
         )
 
         def search_click(e):
             """
-            Called when the search button is pressed, it displays the colors.
+            Called when the search button is pressed, it displays the Colors.
             """
             display_colors(search_txt.value)
 
         # Creating a row with a search text field and a search button.
         search_query = Row(
-            [search_txt, FloatingActionButton(icon=icons.SEARCH, on_click=search_click, tooltip="search")]
+            [
+                search_txt,
+                FloatingActionButton(
+                    icon=Icons.SEARCH, on_click=search_click, tooltip="search"
+                ),
+            ]
         )
 
         # Creating a grid view with 10 columns and 150 pixels as the maximum extent of each column.
         search_results = GridView(
-            expand=1, runs_count=10, max_extent=150, spacing=5, run_spacing=5, child_aspect_ratio=1,
+            expand=1,
+            runs_count=10,
+            max_extent=150,
+            spacing=5,
+            run_spacing=5,
+            child_aspect_ratio=1,
         )
         status_bar = Text()
 
@@ -96,7 +126,9 @@ class ColorBrowser1(UserControl):
 
             for color_key, color_value in colors_dict.items():
                 # the color_key has underscores while the color_value doesn't. We take this into consideration
-                if search_term and (search_term in color_value or search_term in color_key.lower()):
+                if search_term and (
+                    search_term in color_value or search_term in color_key.lower()
+                ):
                     yield color_key
 
         def display_colors(search_term: str):
@@ -115,17 +147,25 @@ class ColorBrowser1(UserControl):
             # Adding the colors to the grid view in batches of 40.
             for batch in batches(search_colors(search_term.lower()), 40):
                 for color_key in batch:
-                    flet_color_key = f"colors.{color_key}"
+                    flet_color_key = f"Colors.{color_key}"
 
                     search_results.controls.append(
                         TextButton(
                             content=Container(
                                 content=Column(
                                     [
-                                        Icon(name=icons.RECTANGLE, size=38, color=colors_dict[color_key], ),
+                                        Icon(
+                                            name=Icons.RECTANGLE,
+                                            size=38,
+                                            color=colors_dict[color_key],
+                                        ),
                                         Text(
-                                            value=f"{colors_dict[color_key]}", size=14, width=100,
-                                            no_wrap=True, text_align="center", color=colors_dict[color_key],
+                                            value=f"{colors_dict[color_key]}",
+                                            size=14,
+                                            width=100,
+                                            no_wrap=True,
+                                            text_align="center",
+                                            color=colors_dict[color_key],
                                         ),
                                     ],
                                     spacing=5,
@@ -194,22 +234,31 @@ def main(page: Page):
         page.update()
 
     # button to change theme_mode (from dark to light mode, or the reverse)
-    theme_icon_button = IconButton(icons.DARK_MODE, selected_icon=icons.LIGHT_MODE, icon_color=colors.BLACK,
-                                   icon_size=35, tooltip="change theme",
-                                   on_click=change_theme,
-                                   style=ButtonStyle(color={"": colors.BLACK, "selected": colors.WHITE}, ), )
+    theme_icon_button = IconButton(
+        Icons.DARK_MODE,
+        selected_icon=Icons.LIGHT_MODE,
+        icon_color=Colors.BLACK,
+        icon_size=35,
+        tooltip="change theme",
+        on_click=change_theme,
+        style=ButtonStyle(
+            color={"": Colors.BLACK, "selected": Colors.WHITE},
+        ),
+    )
 
     # Creating an AppBar object and assigning it to the page.appbar attribute.
-    page.appbar = AppBar(title=Text("Colors Browser V1", color="white"), center_title=True, bgcolor="blue",
-                         actions=[theme_icon_button], )
+    page.appbar = AppBar(
+        title=Text("Colors Browser V1", color="white"),
+        center_title=True,
+        bgcolor="blue",
+        actions=[theme_icon_button],
+    )
 
     # Creating an instance of the ColorBrowser1 class.
     version_1 = ColorBrowser1()
 
     # adds the color browser to the page
-    page.add(
-        version_1
-    )
+    page.add(version_1)
 
 
 # (running the app)

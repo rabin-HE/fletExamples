@@ -11,7 +11,7 @@ def main(page: Page):
             View(
                 "/",
                 [
-                    AppBar(title=Text("Flet app"), bgcolor=colors.SURFACE_VARIANT),
+                    AppBar(title=Text("Flet app"), bgcolor=Colors.SURFACE_VARIANT),
                     ElevatedButton("Visit Store", on_click=lambda _: page.go("/store")),
                 ],
             )
@@ -21,7 +21,7 @@ def main(page: Page):
                 View(
                     "/store",
                     [
-                        AppBar(title=Text("Store"), bgcolor=colors.SURFACE_VARIANT),
+                        AppBar(title=Text("Store"), bgcolor=Colors.SURFACE_VARIANT),
                         ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
                     ],
                 )

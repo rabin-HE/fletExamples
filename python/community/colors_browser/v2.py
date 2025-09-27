@@ -34,7 +34,7 @@ class Tile(Container):
             weight="bold",
             italic=True,
         )
-        self.color_text = f"colors.{tile_text}"
+        self.color_text = f"Colors.{tile_text}"
         self.bgcolor = color
         self.expand = True
         self.height = 40
@@ -114,7 +114,7 @@ class ColorBrowser2(UserControl):
             if key == "PRIMARY":
                 list_started = True
             if list_started:
-                all_flet_colors.append(key)
+                all_flet_Colors.append(key)
 
         def create_tabs(tab_names: list) -> list:
             """
@@ -206,13 +206,13 @@ class ColorBrowser2(UserControl):
         # creating a field which will t=help the user search for specific tabs
         search_field = TextField(
             label="Search Tabs...",
-            prefix_icon=icons.SEARCH,
+            prefix_icon=Icons.SEARCH,
             on_submit=filter_tabs,
             border_radius=50,
             suffix=IconButton(
-                icon=icons.CHECK,
-                bgcolor=colors.INVERSE_PRIMARY,
-                icon_color=colors.ERROR,
+                icon=Icons.CHECK,
+                bgcolor=Colors.INVERSE_PRIMARY,
+                icon_color=Colors.ERROR,
                 on_click=filter_tabs,
             ),
             helper_text="Tip: Enter 'ALL' to show all the tabs",
@@ -269,14 +269,14 @@ def main(page: Page):
 
     # button to change theme_mode (from dark to light mode, or the reverse)
     theme_icon_button = IconButton(
-        icons.DARK_MODE,
-        selected_icon=icons.LIGHT_MODE,
-        icon_color=colors.BLACK,
+        Icons.DARK_MODE,
+        selected_icon=Icons.LIGHT_MODE,
+        icon_color=Colors.BLACK,
         icon_size=35,
         tooltip="change theme",
         on_click=change_theme,
         style=ButtonStyle(
-            color={"": colors.BLACK, "selected": colors.WHITE},
+            color={"": Colors.BLACK, "selected": Colors.WHITE},
         ),
     )
 

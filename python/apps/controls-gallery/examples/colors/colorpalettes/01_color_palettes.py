@@ -55,24 +55,24 @@ def example():
     def generate_color_names(swatch):
         colors = []
         base_color = Color(swatch=swatch)
-        colors.append(base_color)
+        Colors.append(base_color)
         if swatch.name == "white":
             for shade in WHITE_SHADES:
                 color = Color(swatch=swatch, shade=shade)
-                colors.append(color)
+                Colors.append(color)
             return colors
         if swatch.name == "black":
             for shade in BLACK_SHADES:
                 color = Color(swatch=swatch, shade=shade)
-                colors.append(color)
+                Colors.append(color)
             return colors
         for shade in SHADES:
             color = Color(swatch=swatch, shade=shade)
-            colors.append(color)
+            Colors.append(color)
         if swatch.accent:
             for shade in ACCENT_SHADES:
                 color = Color(swatch=swatch, shade=shade, accent=True)
-                colors.append(color)
+                Colors.append(color)
         return colors
 
     responsive_row = ft.ResponsiveRow(
@@ -99,7 +99,7 @@ def example():
             )
         )
         for color in generate_color_names(swatch):
-            swatch_colors.controls.append(
+            swatch_Colors.controls.append(
                 ft.Container(
                     height=50,
                     alignment=ft.alignment.center,

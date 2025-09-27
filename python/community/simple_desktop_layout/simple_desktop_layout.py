@@ -92,7 +92,7 @@ class DesktopAppLayout(Row):
             selected_index=0,
             label_type="none",
             on_change=self._navigation_change,
-            # bgcolor=colors.SURFACE_VARIANT,
+            # bgcolor=Colors.SURFACE_VARIANT,
         )
 
     def update_destinations(self):
@@ -121,7 +121,7 @@ class DesktopAppLayout(Row):
         appbar = AppBar(
             # leading=menu_button,
             # leading_width=40,
-            # bgcolor=colors.SURFACE_VARIANT,
+            # bgcolor=Colors.SURFACE_VARIANT,
             toolbar_height=48,
             # elevation=8,
         )
@@ -130,14 +130,14 @@ class DesktopAppLayout(Row):
             Row(
                 [
                     PopupMenuButton(
-                        icon=icons.HELP,
+                        icon=Icons.HELP,
                         items=[
                             PopupMenuItem(
-                                icon=icons.CONTACT_SUPPORT,
+                                icon=Icons.CONTACT_SUPPORT,
                                 text="Ask a question",
                             ),
                             PopupMenuItem(
-                                icon=icons.BUG_REPORT,
+                                icon=Icons.BUG_REPORT,
                                 text="Report a bug",
                             ),
                         ],
@@ -169,8 +169,8 @@ def main(page: Page):
     pages = [
         (
             NavigationRailDestination(
-                icon=icons.LANDSCAPE_OUTLINED,
-                selected_icon=icons.LANDSCAPE,
+                icon=Icons.LANDSCAPE_OUTLINED,
+                selected_icon=Icons.LANDSCAPE,
                 label="Menu Item A",
             ),
             create_page(
@@ -180,8 +180,8 @@ def main(page: Page):
         ),
         (
             NavigationRailDestination(
-                icon=icons.PORTRAIT_OUTLINED,
-                selected_icon=icons.PORTRAIT,
+                icon=Icons.PORTRAIT_OUTLINED,
+                selected_icon=Icons.PORTRAIT,
                 label="Menu Item B",
             ),
             create_page(
@@ -191,8 +191,8 @@ def main(page: Page):
         ),
         (
             NavigationRailDestination(
-                icon=icons.INSERT_EMOTICON_OUTLINED,
-                selected_icon=icons.INSERT_EMOTICON,
+                icon=Icons.INSERT_EMOTICON_OUTLINED,
+                selected_icon=Icons.INSERT_EMOTICON,
                 label="Example Page C",
             ),
             create_page(

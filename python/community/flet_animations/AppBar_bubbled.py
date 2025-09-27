@@ -39,7 +39,7 @@ def main(page: ft.Page):
     page.appbar = ft.AppBar(
         title=ft.Text("Bottom AppBar Demo"),
         center_title=True,
-        bgcolor=ft.colors.GREEN_300,
+        bgcolor=ft.Colors.GREEN_300,
         automatically_imply_leading=False,
     )
     first = ft.IconButton(
@@ -65,7 +65,7 @@ def main(page: ft.Page):
         spacing=((page.width / 100) * 129.1) / 3, controls=[first, nothing, third]
     )
     page.bottom_appbar = ft.BottomAppBar(
-        bgcolor=ft.colors.BLUE,
+        bgcolor=ft.Colors.BLUE,
         shape=ft.NotchShape.CIRCULAR,
         notch_margin=5,
         content=row_,

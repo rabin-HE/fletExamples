@@ -75,7 +75,7 @@ def main(page: ft.Page):
     shadow_ = ft.BoxShadow(
         spread_radius=10,
         blur_radius=20,
-        color=ft.colors.BLACK,
+        color=ft.Colors.BLACK,
         offset=ft.Offset(0, 0),
         blur_style=ft.ShadowBlurStyle.OUTER,
     )

@@ -104,7 +104,7 @@ def main(page: ft.Page):
         ),
     )
     page.bottom_appbar = ft.BottomAppBar(
-        bgcolor=ft.colors.WHITE,
+        bgcolor=ft.Colors.WHITE,
         shape=ft.NotchShape.CIRCULAR,
         content=ft.Row(
             controls=[

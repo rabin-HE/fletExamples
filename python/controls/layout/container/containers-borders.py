@@ -5,7 +5,7 @@ def main(page: ft.Page):
     page.title = "Containers with different borders"
 
     c1 = ft.Container(
-        bgcolor=ft.colors.AMBER,
+        bgcolor=ft.Colors.AMBER,
         padding=15,
         border=ft.border.all(10, ft.Colors.PINK_600),
         border_radius=ft.border_radius.all(30),
@@ -14,7 +14,7 @@ def main(page: ft.Page):
     )
 
     c2 = ft.Container(
-        bgcolor=ft.colors.DEEP_PURPLE,
+        bgcolor=ft.Colors.DEEP_PURPLE,
         padding=15,
         border=ft.border.all(3, ft.Colors.LIGHT_GREEN_ACCENT),
         border_radius=ft.border_radius.only(top_left=10, bottom_right=10),
@@ -23,7 +23,7 @@ def main(page: ft.Page):
     )
 
     c3 = ft.Container(
-        bgcolor=ft.colors.BLUE_GREY_900,
+        bgcolor=ft.Colors.BLUE_GREY_900,
         padding=15,
         border=ft.border.symmetric(vertical=ft.BorderSide(8, ft.Colors.YELLOW_800)),
         width=150,

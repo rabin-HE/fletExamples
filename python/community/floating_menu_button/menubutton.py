@@ -77,7 +77,7 @@ class AnimatedMenuButton(Stack):
         corner: Corner = "top left",
         direction: Direction = "vertical",
         margin: int = 8,
-        menu_button_icon: str = icons.MENU,
+        menu_button_icon: str = Icons.MENU,
         menu_button_style: ButtonStyle = None,
         menu_item_size: int = DEFAULT_SIZE,
         menu_item_gap: int = DEFAULT_GAP,
@@ -302,13 +302,13 @@ if __name__ == "__main__":
 
     def main(page: Page):
         menu_items = [
-            MenuItem(icon=icons.ADD_OUTLINED, handler=dummy_menu_handler),
-            MenuItem(icon=icons.EDIT_OUTLINED, handler=dummy_menu_handler),
-            MenuItem(icon=icons.INFO_OUTLINED, handler=dummy_menu_handler),
+            MenuItem(icon=Icons.ADD_OUTLINED, handler=dummy_menu_handler),
+            MenuItem(icon=Icons.EDIT_OUTLINED, handler=dummy_menu_handler),
+            MenuItem(icon=Icons.INFO_OUTLINED, handler=dummy_menu_handler),
             MenuItem(
-                icon=icons.DELETE_OUTLINE,
+                icon=Icons.DELETE_OUTLINE,
                 handler=dummy_menu_handler,
-                style=ButtonStyle(bgcolor=colors.ERROR_CONTAINER),
+                style=ButtonStyle(bgcolor=Colors.ERROR_CONTAINER),
             ),
         ]
 

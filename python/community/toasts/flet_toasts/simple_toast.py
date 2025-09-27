@@ -81,7 +81,7 @@ class Toast:
                     [
                         Text(f"{self.timer} seconds ago"),
                         IconButton(
-                            icons.CLOSE_OUTLINED,
+                            Icons.CLOSE_OUTLINED,
                             on_click=lambda x: threading.Thread(
                                 target=self._close, daemon=True
                             ).start(),
@@ -100,7 +100,7 @@ class Toast:
             bgcolor=self.bgcolor,
             border_radius=10,
             padding=10,
-            border=border.all(0.5, colors.BLACK12),
+            border=border.all(0.5, Colors.BLACK12),
             right=0,
             bottom=0,
             expand=True,

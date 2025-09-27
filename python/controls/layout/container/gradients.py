@@ -42,7 +42,7 @@ def main(page: ft.Page):
                     gradient=ft.LinearGradient(
                         begin=ft.alignment.center_left,
                         end=ft.alignment.center_right,
-                        colors=[ft.colors.RED, ft.colors.GREEN, ft.colors.BLUE],
+                        colors=[ft.Colors.RED, ft.Colors.GREEN, ft.Colors.BLUE],
                         stops=[0.1, 0.2, 1.0],
                         tile_mode=ft.GradientTileMode.MIRROR,
                     ),

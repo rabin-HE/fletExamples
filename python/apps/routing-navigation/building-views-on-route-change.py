@@ -24,7 +24,7 @@ def main(page: Page):
                 View(
                     "/settings",
                     [
-                        AppBar(title=Text("Settings"), bgcolor=colors.SURFACE_VARIANT),
+                        AppBar(title=Text("Settings"), bgcolor=Colors.SURFACE_VARIANT),
                         Text("Settings!", style="bodyMedium"),
                         ElevatedButton(
                             "Go to mail settings", on_click=open_mail_settings
@@ -38,7 +38,7 @@ def main(page: Page):
                     "/settings/mail",
                     [
                         AppBar(
-                            title=Text("Mail Settings"), bgcolor=colors.SURFACE_VARIANT
+                            title=Text("Mail Settings"), bgcolor=Colors.SURFACE_VARIANT
                         ),
                         Text("Mail settings!"),
                     ],

@@ -23,13 +23,13 @@ def dummy_menu_handler(event):
 
 def main(page: Page):
     menu_items = [
-        MenuItem(icon=icons.ADD_OUTLINED, handler=dummy_menu_handler),
-        MenuItem(icon=icons.EDIT_OUTLINED, handler=dummy_menu_handler),
-        MenuItem(icon=icons.INFO_OUTLINED, handler=dummy_menu_handler),
+        MenuItem(icon=Icons.ADD_OUTLINED, handler=dummy_menu_handler),
+        MenuItem(icon=Icons.EDIT_OUTLINED, handler=dummy_menu_handler),
+        MenuItem(icon=Icons.INFO_OUTLINED, handler=dummy_menu_handler),
         MenuItem(
-            icon=icons.DELETE_OUTLINE,
+            icon=Icons.DELETE_OUTLINE,
             handler=dummy_menu_handler,
-            style=ButtonStyle(bgcolor=colors.ERROR_CONTAINER),
+            style=ButtonStyle(bgcolor=Colors.ERROR_CONTAINER),
         ),
     ]
 
@@ -50,7 +50,7 @@ top left corner.
 - `corner: Corner = "top left", "top right", "bottom left", "bottom right"`
 - `direction: Direction = "vertical", "horizontal", "curve up", "curve down"`
 - `margin: int = 8` (distance from the selected corner)
-- `menu_button_icon: str = icons.MENU`
+- `menu_button_icon: str = Icons.MENU`
 - `menu_button_style: ButtonStyle = None`
 - `menu_item_size: int = 50`
 - `menu_item_gap: int = 5`

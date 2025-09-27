@@ -33,7 +33,7 @@ def example(page):
                             y=0,
                             height=4,
                             border_radius=3,
-                            paint=ft.Paint(color=ft.colors.GREY_500),
+                            paint=ft.Paint(color=ft.Colors.GREY_500),
                             width=100,
                         ),
                         cv.Rect(
@@ -41,14 +41,14 @@ def example(page):
                             y=0,
                             height=4,
                             border_radius=3,
-                            paint=ft.Paint(color=ft.colors.GREY_900),
+                            paint=ft.Paint(color=ft.Colors.GREY_900),
                             width=100,
                         ),
                         cv.Circle(
                             x=100,
                             y=2,
                             radius=6,
-                            paint=ft.Paint(color=ft.colors.GREY_900),
+                            paint=ft.Paint(color=ft.Colors.GREY_900),
                         ),
                     ]
                 ),
@@ -100,7 +100,7 @@ def example(page):
                             y=0,
                             height=5,
                             border_radius=3,
-                            paint=ft.Paint(color=ft.colors.GREY_500),
+                            paint=ft.Paint(color=ft.Colors.GREY_500),
                             width=100,
                         ),
                         cv.Rect(
@@ -108,7 +108,7 @@ def example(page):
                             y=0,
                             height=5,
                             border_radius=3,
-                            paint=ft.Paint(color=ft.colors.GREY_900),
+                            paint=ft.Paint(color=ft.Colors.GREY_900),
                             width=0,
                         ),
                     ],

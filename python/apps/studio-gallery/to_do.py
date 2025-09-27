@@ -47,7 +47,7 @@ def example(page):
                     self.edit_name,
                     ft.IconButton(
                         icon=ft.Icons.DONE_OUTLINE_OUTLINED,
-                        icon_color=ft.colors.GREEN,
+                        icon_color=ft.Colors.GREEN,
                         tooltip="Update To-Do",
                         on_click=self.save_clicked,
                     ),

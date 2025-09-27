@@ -51,9 +51,9 @@ def main(page: Page):
     page.add(
         Row(
             [
-                IconButton(icons.REMOVE, on_click=minus_click),
+                IconButton(Icons.REMOVE, on_click=minus_click),
                 txt_number,
-                IconButton(icons.ADD, on_click=plus_click),
+                IconButton(Icons.ADD, on_click=plus_click),
             ],
             alignment="center",
         )

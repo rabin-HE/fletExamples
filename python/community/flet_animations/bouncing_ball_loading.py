@@ -77,7 +77,7 @@ def main(page: ft.Page):
     text_ = ft.Text(
         "Loading...",
         size=35,
-        color=ft.colors.WHITE,
+        color=ft.Colors.WHITE,
         weight=ft.FontWeight.BOLD,
     )
     page.add(

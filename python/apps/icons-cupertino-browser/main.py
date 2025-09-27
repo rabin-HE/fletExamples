@@ -40,7 +40,7 @@ class IconCupertinoBrowser(Container):
             while batch := list(islice(iterator, batch_size)):
                 yield batch
 
-        # fetch all icon constants from icons.py module
+        # fetch all icon constants from Icons.py module
         icons_list = []
         for icon in CupertinoIcons:
             icons_list.append(icon.name)
@@ -106,16 +106,23 @@ class IconCupertinoBrowser(Container):
             for batch in batches(search_icons(search_term.upper()), 200):
                 for icon_name in batch:
                     # HOT GLUE - primitive text in replace to diplay & copy correctly.
-                    icon_key = f"CupertinoIcons.{icon_name.upper()}".replace("cupertino_".upper(), "")
+                    icon_key = f"CupertinoIcons.{icon_name.upper()}".replace(
+                        "cupertino_".upper(), ""
+                    )
                     search_results.controls.append(
                         TextButton(
                             content=Container(
                                 content=Column(
                                     [
-                                        Icon(name=f"cupertino_{icon_name.lower()}", size=30),
+                                        Icon(
+                                            name=f"cupertino_{icon_name.lower()}",
+                                            size=30,
+                                        ),
                                         Text(
                                             # HOT GLUE - primitive text in replace to diplay & copy correctly.
-                                            value=f"{icon_name}".replace("cupertino_", ""),
+                                            value=f"{icon_name}".replace(
+                                                "cupertino_", ""
+                                            ),
                                             size=12,
                                             width=100,
                                             no_wrap=True,

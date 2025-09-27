@@ -12,7 +12,7 @@ def main(page: ft.Page):
             content=ft.Text("Hover to see tooltip"),
             padding=20,
             border_radius=10,
-            text_style=ft.TextStyle(size=20, color=ft.colors.WHITE),
+            text_style=ft.TextStyle(size=20, color=ft.Colors.WHITE),
             gradient=ft.LinearGradient(
                 begin=alignment.top_left,
                 end=alignment.Alignment(0.8, 1),

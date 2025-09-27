@@ -2,16 +2,17 @@ import flet
 from flet import Page, colors, ElevatedButton, icons
 from flet_toasts import Toast
 
+
 def main(page: Page):
     btn = ElevatedButton("Toast")
     page.add(btn)
     Toast(
         page,
-        icons.PERSON_SHARP,
+        Icons.PERSON_SHARP,
         "Toast title",
         "Toast description",
         btn,
-        colors.WHITE,
+        Colors.WHITE,
     ).struct()
 
 

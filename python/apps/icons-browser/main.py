@@ -18,7 +18,7 @@ from flet import (
     alignment,
     Colors,
     Icons,
-    Stack
+    Stack,
 )
 
 # logging.basicConfig(level=logging.INFO)
@@ -40,8 +40,8 @@ class IconBrowser(Container):
             while batch := list(islice(iterator, batch_size)):
                 yield batch
 
-        # fetch all icon constants from icons.py module
-        icons_list = []        
+        # fetch all icon constants from Icons.py module
+        icons_list = []
         list_started = False
         for icon in Icons:
             icons_list.append(icon.name)

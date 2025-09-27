@@ -86,7 +86,7 @@ class ResponsiveMenuLayout(Row):
             self._landscape_minimize_to_icons and self._portrait_minimize_to_icons
         )
 
-    @minimize_to_icons.setter
+    @minimize_to_Icons.setter
     def minimize_to_icons(self, value: bool):
         self._minimize_to_icons = value
         self.set_navigation_content()
@@ -95,7 +95,7 @@ class ResponsiveMenuLayout(Row):
     def landscape_minimize_to_icons(self) -> bool:
         return self._landscape_minimize_to_icons or self._minimize_to_icons
 
-    @landscape_minimize_to_icons.setter
+    @landscape_minimize_to_Icons.setter
     def landscape_minimize_to_icons(self, value: bool):
         self._landscape_minimize_to_icons = value
         self.set_navigation_content()
@@ -104,7 +104,7 @@ class ResponsiveMenuLayout(Row):
     def portrait_minimize_to_icons(self) -> bool:
         return self._portrait_minimize_to_icons or self._minimize_to_icons
 
-    @portrait_minimize_to_icons.setter
+    @portrait_minimize_to_Icons.setter
     def portrait_minimize_to_icons(self, value: bool):
         self._portrait_minimize_to_icons = value
         self.set_navigation_content()
@@ -246,19 +246,19 @@ if __name__ == "__main__":
 
         page.title = title
 
-        menu_button = IconButton(icons.MENU)
+        menu_button = IconButton(Icons.MENU)
 
         page.appbar = AppBar(
             leading=menu_button,
             leading_width=40,
-            bgcolor=colors.SURFACE_VARIANT,
+            bgcolor=Colors.SURFACE_VARIANT,
         )
 
         pages = [
             (
                 dict(
-                    icon=icons.LANDSCAPE_OUTLINED,
-                    selected_icon=icons.LANDSCAPE,
+                    icon=Icons.LANDSCAPE_OUTLINED,
+                    selected_icon=Icons.LANDSCAPE,
                     label="Menu in landscape",
                 ),
                 create_page(
@@ -269,8 +269,8 @@ if __name__ == "__main__":
             ),
             (
                 dict(
-                    icon=icons.PORTRAIT_OUTLINED,
-                    selected_icon=icons.PORTRAIT,
+                    icon=Icons.PORTRAIT_OUTLINED,
+                    selected_icon=Icons.PORTRAIT,
                     label="Menu in portrait",
                 ),
                 create_page(
@@ -285,13 +285,13 @@ if __name__ == "__main__":
             ),
             (
                 dict(
-                    icon=icons.INSERT_EMOTICON_OUTLINED,
-                    selected_icon=icons.INSERT_EMOTICON,
+                    icon=Icons.INSERT_EMOTICON_OUTLINED,
+                    selected_icon=Icons.INSERT_EMOTICON,
                     label="Minimize to icons",
                 ),
                 create_page(
                     "Minimize to icons",
-                    "ResponsiveMenuLayout has a parameter minimize_to_icons. "
+                    "ResponsiveMenuLayout has a parameter minimize_to_Icons. "
                     "Set it to True and the menu is shown as icons only, when normally it would be hidden.\n"
                     "\n\n"
                     "Try this with the 'Minimize to icons' toggle in the top bar."
@@ -302,8 +302,8 @@ if __name__ == "__main__":
             ),
             (
                 dict(
-                    icon=icons.COMPARE_ARROWS_OUTLINED,
-                    selected_icon=icons.COMPARE_ARROWS,
+                    icon=Icons.COMPARE_ARROWS_OUTLINED,
+                    selected_icon=Icons.COMPARE_ARROWS,
                     label="Menu width",
                 ),
                 create_page(
@@ -316,8 +316,8 @@ if __name__ == "__main__":
             ),
             (
                 dict(
-                    icon=icons.ROUTE_OUTLINED,
-                    selected_icon=icons.ROUTE,
+                    icon=Icons.ROUTE_OUTLINED,
+                    selected_icon=Icons.ROUTE,
                     label="Route support",
                     route="custom-route",
                 ),
@@ -335,8 +335,8 @@ if __name__ == "__main__":
             ),
             (
                 dict(
-                    icon=icons.PLUS_ONE_OUTLINED,
-                    selected_icon=icons.PLUS_ONE,
+                    icon=Icons.PLUS_ONE_OUTLINED,
+                    selected_icon=Icons.PLUS_ONE,
                     label="Fine control",
                 ),
                 create_page(
@@ -370,7 +370,7 @@ if __name__ == "__main__":
         ]
 
         menu_layout.navigation_rail.leading = ElevatedButton(
-            "Add", icon=icons.ADD, expand=True, on_click=lambda e: print("Add clicked")
+            "Add", icon=Icons.ADD, expand=True, on_click=lambda e: print("Add clicked")
         )
 
         page.add(menu_layout)
