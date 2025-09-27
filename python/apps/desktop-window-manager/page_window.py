@@ -12,8 +12,8 @@ from flet import (
     alignment,
     border,
     border_radius,
-    colors,
-    icons,
+    Colors,
+    Icons,
     padding,
 )
 
@@ -143,10 +143,10 @@ def main(page: Page):
                     expand=1,
                     controls=[
                         Container(
-                            bgcolor=colors.AMBER_200,
+                            bgcolor=Colors.AMBER_200,
                             width=300,
                             height=300,
-                            border=border.all(1, colors.BLACK),
+                            border=border.all(1, Colors.BLACK),
                             padding=padding.all(10),
                             content=Column(
                                 alignment="spaceBetween",
@@ -155,10 +155,10 @@ def main(page: Page):
                                         alignment="center",
                                         controls=[
                                             Container(
-                                                bgcolor=colors.LIGHT_BLUE_500,
+                                                bgcolor=Colors.LIGHT_BLUE_500,
                                                 border_radius=border_radius.all(30),
                                                 content=IconButton(
-                                                    icon=icons.KEYBOARD_ARROW_UP,
+                                                    icon=Icons.KEYBOARD_ARROW_UP,
                                                     on_click=move_up,
                                                 ),
                                             ),
@@ -168,18 +168,18 @@ def main(page: Page):
                                         alignment="spaceBetween",
                                         controls=[
                                             Container(
-                                                bgcolor=colors.LIGHT_BLUE_500,
+                                                bgcolor=Colors.LIGHT_BLUE_500,
                                                 border_radius=border_radius.all(30),
                                                 content=IconButton(
-                                                    icon=icons.KEYBOARD_ARROW_LEFT,
+                                                    icon=Icons.KEYBOARD_ARROW_LEFT,
                                                     on_click=move_left,
                                                 ),
                                             ),
                                             Container(
-                                                bgcolor=colors.LIGHT_BLUE_500,
+                                                bgcolor=Colors.LIGHT_BLUE_500,
                                                 border_radius=border_radius.all(30),
                                                 content=IconButton(
-                                                    icon=icons.KEYBOARD_ARROW_RIGHT,
+                                                    icon=Icons.KEYBOARD_ARROW_RIGHT,
                                                     on_click=move_right,
                                                 ),
                                             ),
@@ -189,10 +189,10 @@ def main(page: Page):
                                         alignment="center",
                                         controls=[
                                             Container(
-                                                bgcolor=colors.LIGHT_BLUE_500,
+                                                bgcolor=Colors.LIGHT_BLUE_500,
                                                 border_radius=border_radius.all(30),
                                                 content=IconButton(
-                                                    icon=icons.KEYBOARD_ARROW_DOWN,
+                                                    icon=Icons.KEYBOARD_ARROW_DOWN,
                                                     on_click=move_down,
                                                 ),
                                             ),
@@ -239,5 +239,6 @@ def main(page: Page):
     )
 
     window_changed(None)
+
 
 flet.app(target=main)
